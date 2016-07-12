@@ -406,3 +406,23 @@ public class Utility: UIResponder, CLLocationManagerDelegate {
     }
     
 }
+
+//Share data in multiple application via Appgroup extension
+
+        let userDefaults = NSUserDefaults(suiteName: "group.com.karya.services.Second-Group")
+        
+        userDefaults?.setObject("Ekambaram", forKey: "name")
+        userDefaults?.synchronize()
+        
+        
+        
+        let defaults = NSUserDefaults(suiteName: "group.com.karya.services.eller")
+        defaults?.synchronize()
+        
+        // Check for null value before setting
+        if let restoredValue = defaults!.stringForKey("UserID") {
+            print("Name :\(restoredValue) ")
+        }
+        else {
+            print("Cannot find value")
+        }
