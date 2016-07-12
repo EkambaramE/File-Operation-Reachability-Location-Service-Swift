@@ -415,7 +415,6 @@ public class Utility: UIResponder, CLLocationManagerDelegate {
         userDefaults?.synchronize()
         
         
-        
         let defaults = NSUserDefaults(suiteName: "group.com.karya.services.eller")
         defaults?.synchronize()
         
